@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+    <script type="text/javascript" src="mainCtrl.js"></script>
+    <link rel="stylesheet" href="panorama.css"/>
+</head>
+<body>
+    <div ng-app="smartManual">
+        <div ng-controller="mainCtrl">
+
+            <div id="panorama">
+
+                <div id="myLeftSidenav" class="leftsidenav">
+                    <a href="javascript:void(0)" class="closebtn" ng-click="closeLeftNav()">&times;</a>
+                    <div class="list-project"><a>{{floors[0].project.projectName}}</a></div>
+                    <div class="list-floor" ng-repeat="floor in floors" ng-click="floorDropDown()">
+                        <a>{{floor.floorName}}</a>
+                        <div class="list-room" ng-repeat="area in floorAreas" ng-if="showGroundRooms(floor)" ng-click="changeRoom(area.name)">
+                            <a>{{area.name}}</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="toggle" ng-click="openLeftNav()">&#9776;</span>
+
+
+                <div id="myRightSidenav" class="rightsidenav">
+                    <a href="javascript:void(0)" class="closebtn" ng-click="closeRightNav()">&times;</a>
+
+                   <div class='light-doc-type' id='show-light' ng-repeat='doc in lightDocs'>
+                        <a>{{doc.docType}}</a>
+                        <div class='light-doc-name' >
+                            <a ng-href='http://localhost:9191/download/{{doc.docName}}'>{{doc.docName}}</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
