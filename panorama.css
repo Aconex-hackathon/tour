@@ -3,14 +3,10 @@
 	height: 825px;
 }
 
-#show-smoke {
-	display: block;
+.light-doc-name {
+	font-weight: 100;
+    font-style: italic;
 }
-
-#show-ac {
-	display: block;
-}
-
 
 .list-project {
 	border-bottom: 1px solid #777;

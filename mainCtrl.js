@@ -44,8 +44,8 @@ angular.module('smartManual', [])
                     },
                     {
                         "clickHandlerFunc": docFunction,
-                        "pitch": 23.3,
-                        "yaw": -91.5,
+                        "pitch": 24.2,
+                        "yaw": -88.2,
                         "type": "info",
                         "text": "Light Fixture",
                     },
@@ -65,6 +65,7 @@ angular.module('smartManual', [])
                 "yaw": 5,
                 "type": "equirectangular",
                 "panorama": "/images/hampi.jpg",
+                "hotSpotDebug": true,
                 "hotSpots": [
                     {
                         "pitch": 2.3,
@@ -85,8 +86,8 @@ angular.module('smartManual', [])
                     },
                     {
                         "clickHandlerFunc": docFunction,
-                        "pitch": 39.4,
-                        "yaw": -14.6,
+                        "pitch": 39.6,
+                        "yaw": -7.6,
                         "type": "info",
                         "text": "Light Fixture",
                     },
